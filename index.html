@@ -4,23 +4,25 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Total Battle Guidebook</title>
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
 </head>
 <body>
 <nav>
-    <a href="#bp" onclick="showSection('Best_Practices')">Best Practices</a>
-    <a href="#cot" onclick="showSection('CoT_Info')">CoT Info</a>
-    <a href="#cp" onclick="showSection('CP_Marches')">CP Marches</a>
-    <a href="#food" onclick="showSection('Food_Management')">Food Management</a>
-    <a href="#kvk" onclick="showSection('KvK_Event')">KvK Event</a>
+    <a href="#bp" onclick="loadSection('Best_Practices.html')">Best Practices</a>
+    <a href="#cot" onclick="loadSection('CoT_Info.html')">CoT Info</a>
+    <a href="#cp" onclick="loadSection('CP_Marches.html')">CP Marches</a>
+    <a href="#food" onclick="loadSection('Food_Management.html')">Food Management</a>
+    <a href="#kvk" onclick="loadSection('KvK_Event.html')">KvK Event</a>
 </nav>
 
-<section id="Best_Practices"></section>
-<section id="CoT_Info"></section>
-<section id="CP_Marches"></section>
-<section id="Food_Management"></section>
-<section id="KvK_Event"></section>
+<div id="content">
+  <!-- Aici se vor încărca secțiunile -->
+</div>
 
-<script src="js/main.js"></script>
+<script>
+  // La încărcare, afișează Best Practices
+  window.onload = () => loadSection('Best_Practices.html');
+</script>
 </body>
 </html>
